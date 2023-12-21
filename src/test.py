@@ -26,3 +26,5 @@ def classify_digits1():
     global net
     net = network.Network([784, 30, 10])
     net.SGD(training_data, 30, 10, 3.0, test_data=test_data)
+
+print(__path__)

@@ -63,8 +63,9 @@ else:
     print("Running with a CPU.  If this is not desired, then the modify "+\
         "network3.py to set\nthe GPU flag to True.")
 
+import os
 #### Load the MNIST data
-def load_data_shared(filename="../data/mnist.pkl.gz"):
+def load_data_shared(filename=f"{os.path.dirname(__file__)}/../data/mnist.pkl.gz"):
     f = gzip.open(filename, 'rb')
     training_data, validation_data, test_data = cPickle.load(f)
     f.close()
